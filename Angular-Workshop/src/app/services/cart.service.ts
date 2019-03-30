@@ -12,11 +12,10 @@ export class CartService {
     orderprice : "",
     ordercart : 0
   }];
-  private count = 1;
   constructor() { }
   
   addcart(ordercart : Order){
-    this.ordercart.push(ordercart)
+    this.ordercart.push(JSON.parse(JSON.stringify(ordercart)));
   }
 
   getOrdercart(): Observable<Order[]>{

@@ -10,11 +10,14 @@ import { CartService } from "../services/cart.service";
 export class CartComponent implements OnInit {
 
   private cart: Order[];
+  private test : boolean = false;
   constructor(private cartservice :CartService) { }
 
   ngOnInit() {
+    this.test = false;
     this.cartservice.getOrdercart().subscribe(result =>{
       this.cart = result
+      this.test = true
     })
   }
 
