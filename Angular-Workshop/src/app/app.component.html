@@ -1,0 +1,23 @@
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div class="container" style="margin-top:5vh;">
+  <div class="row">
+    <div class="order-list col" >
+      <app-order-list (orderselect)="orderselected($event)"></app-order-list>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="order-selected col-6">
+      <app-order-selected [order]="orderselect" ></app-order-selected>
+    </div>
+    <div class="cart col-6">
+        <app-cart></app-cart>
+    </div>
+  </div>
+</div>
+

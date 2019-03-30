@@ -1,0 +1,22 @@
+<div>
+    <h2 style="text-align:center;">ตะกร้าสินค้า</h2>
+    <table class="table text-center">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">รหัสสินค้า</th>
+            <th scope="col">ชื่อสินค้า</th>
+            <th scope="col">ราคาสินค้า</th>
+            <th scope="col">จำนวนที่เลือก</th>
+            <th scope="col">รวม</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of cart;let i = index" >
+            <th scope="row" *ngIf="i > 0">{{cart.id}}</th>
+            <td *ngIf="i > 0">{{cart.ordername}}</td>
+            <td *ngIf="i > 0">{{cart.orderprice}}</td>
+            <td *ngIf="i > 0">{{cart.ordercart}}</td>
+            <td *ngIf="i > 0">{{cart.orderprice * cart.ordercart}}</td>
+        </tbody>
+      </table>
+</div>
