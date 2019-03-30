@@ -1,48 +1,48 @@
-<ul class="list-group text-center">
-  <li class="list-group-item active">สินค้าที่เลือก</li>
-  <li class="list-group-item">
-    <div class="row">
-      <div class="col-6">
-        รหัสสินค้า
-      </div>
-      <div class="col-6">
-        <div *ngIf="order.id">
-          test
+<div *ngIf="order">
+  <ul class="list-group text-center">
+    <li class="list-group-item active">สินค้าที่เลือก</li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-6">
+          รหัสสินค้า
         </div>
-        <!-- <input type="text" disabled [(ngModel)]="order.id" placeholder="รหัสสินค้า" style="text-align:center;"> -->
+        <div class="col-6">
+          <input type="text" disabled [(ngModel)]="order.id" placeholder="รหัสสินค้า" style="text-align:center;">
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="list-group-item">
-    <div class="row">
-      <div class="col-6">
-        ชื่อสินค้า
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-6">
+          ชื่อสินค้า
+        </div>
+        <div class="col-6">
+          <input type="text" disabled [(ngModel)]="order.ordername" placeholder="ชื่อสินค้า" style="text-align:center;">
+        </div>
       </div>
-      <div class="col-6">
-        <!-- <input type="text" disabled [(ngModel)]="order.ordername" placeholder="ชื่อสินค้า" style="text-align:center;"> -->
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-6">
+          ราคาสินค้า
+        </div>
+        <div class="col-6">
+          <input type="text" disabled [(ngModel)]="order.orderprice" placeholder="ราคาสินค้า"
+            style="text-align:center;">
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="list-group-item">
-    <div class="row">
-      <div class="col-6">
-        ราคาสินค้า
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-6">
+          จำนวนที่ต้องการสั่งซือ
+        </div>
+        <div class="col-6">
+          <input [(ngModel)]="order.ordercart" placeholder="จำนวนสินค้า" style="text-align:center;" />
+        </div>
       </div>
-      <div class="col-6">
-        <!-- <input type="text" disabled [(ngModel)]="order.orderprice" placeholder="ราคาสินค้า" style="text-align:center;"> -->
-      </div>
-    </div>
-  </li>
-  <li class="list-group-item">
-    <div class="row">
-      <div class="col-6">
-        จำนวนที่ต้องการสั่งซือ
-      </div>
-      <div class="col-6">
-        <!-- <input [(ngModel)]="order.ordercart" placeholder="จำนวนสินค้า" style="text-align:center;" /> -->
-      </div>
-    </div>
-  </li>
-</ul>
-<br>
-<button type="button" class="btn btn-success" (click)="addcart()">ใส่ตระกร้า</button>
+    </li>
+  </ul>
+  <br>
+  <button type="button" class="btn btn-success" (click)="addcart()">ใส่ตระกร้า</button>
+</div>

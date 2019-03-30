@@ -14,6 +14,12 @@ export class OrderSelectedComponent implements OnInit {
   constructor(private cartservice : CartService) { }
 
   ngOnInit() {
+    // this.order = {
+    //   id : 'รหัสสินค้า',
+    //   ordername : 'ชื่อสินค้า',
+    //   orderprice : 'ราคาสินค้า',
+    //   ordercart : 1
+    // }
   }
   addcart(){
     this.cartservice.addcart(this.order)

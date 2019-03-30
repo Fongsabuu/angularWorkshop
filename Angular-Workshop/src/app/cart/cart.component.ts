@@ -15,7 +15,10 @@ export class CartComponent implements OnInit {
   ngOnInit() {
     this.cartservice.getOrdercart().subscribe(result =>{
       this.cart = result
-    })
+    });
   }
 
+  test2(){
+    console.log(this.cart.length)
+  }
 }
